@@ -26,6 +26,7 @@ function printAllConfig(data) {
 }
 
 
+
 function getAllConfig() {
 
   $.ajax({
@@ -71,12 +72,62 @@ function putNewConfig() {
 
 }
 
+function updateConfig() {
+
+  var me = $(this);
+  $.ajax({
+
+      url: "updateConfig.php",
+      method: "POST",
+      data: me.serialize(),
+      success: function (data) {
+          if (data) {
+
+              getAllConfig(data);
+          }
+      },
+      error: function (error) {
+
+          console.log("error", error);
+      }
+  });
+
+  return false;
+}
+
+function deleteConfig() {
+
+  var me = $(this);
+  $.ajax({
+
+      url: "deleteConfig.php",
+      method: "POST",
+      data: me.serialize(),
+      success: function (data) {
+          if (data) {
+
+              getAllConfig(data);
+          }
+      },
+      error: function (error) {
+
+          console.log("error", error);
+      }
+  });
+
+  return false;
+}
+
+
 
 function init() {
 
   getAllConfig();
-  
+
   $("#addConfig").submit(putNewConfig);
+  $("#updateConfig").submit(updateConfig);
+  $("#deleteConfig").submit(deleteConfig);
+
 }
 
 $(window).ready(init);

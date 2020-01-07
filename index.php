@@ -39,14 +39,36 @@
   <body>
     
     <div class="formContainer">
-      <h1>Inserisci una nuova configurazione</h1>
-      <form id="addConfig">
-        <label for="title">Titolo:</label>
-        <input type="text" name="title" placeholder="titolo"><br>
-        <label for="description">Descrizione:</label>
-        <input type="text" name="description" placeholder="descrizione"><br>
-        <input id="button" type="submit" name="submit" value="nuova configurazione">
-      </form>
+      <div class="newConfigCont">
+        <h1>Inserisci nuova configurazione</h1>
+        <form id="addConfig">
+          <label for="title">Titolo:</label>
+          <input type="text" name="title" placeholder="titolo"><br>
+          <label for="description">Descrizione:</label>
+          <input type="text" name="description" placeholder="descrizione"><br>
+          <input id="button" type="submit" name="submit" value="nuova configurazione">
+        </form>
+      </div>
+      <div class="updateConfigCont">
+      <h1>Modifica una configurazione</h1>
+        <form id="updateConfig">
+          <label for="title">Titolo:</label>
+          <input type="text" name="title" placeholder="titolo"><br>
+          <label for="description">Descrizione:</label>
+          <input type="text" name="description" placeholder="descrizione"><br>
+          <label for="id">Id:</label>
+          <input type="text" name="id" placeholder="id"><br>
+          <input id="button" type="submit" name="submit" value="aggiorna configurazione">
+        </form>
+      </div>
+      <div class="deleteConfigCont">
+      <h1>Elimina una configurazione</h1>
+        <form id="deleteConfig">
+          <label for="id">Id:</label>
+          <input type="text" name="id" placeholder="id"><br>
+          <input id="button" type="submit" name="submit" value="elimina configurazione">
+        </form>
+      </div>
     </div>
 
     <div id="container" class="container">
