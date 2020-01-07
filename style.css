@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background:white;
+}
+
+body{
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  font-size: 22px;
+  display: inline;
+}
+h2 {
+  font-size: 17px;
+}
+.formContainer {
+  align-self: center;
+  width: 400px;
+  border: 1px solid black;
+  display: flex;
+  padding: 8px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  margin-bottom: 4px;
+  height: 30px;
+  padding: 4px;
+}
+
+#button {
+  height: 40px;
+  background-color: lightblue;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+
+
+
